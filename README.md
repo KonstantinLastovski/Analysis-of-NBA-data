@@ -1,6 +1,7 @@
                                                  GLOSSARY 
+												 
 
-NBA_players_stats_advanced dataset:
+                                  NBA_players_stats_advanced dataset:
 
 Rk -- Rank
 
@@ -77,7 +78,7 @@ A box score estimate of the points per 100 TEAM possessions that a player contri
 Multiply by 2.70 to convert to wins over replacement.
 
 
-NBA_players_stats_per_100_possessions dataset:
+                                   NBA_players_stats_per_100_possessions dataset:
 
 Rk -- Rank
 
@@ -142,7 +143,7 @@ DRtg -- Defensive Rating.
 An estimate of points allowed per 100 possessions
 
 
-NBA_players_stats_per_game dataset
+                                          NBA_players_stats_per_game dataset
 
 Rk -- Rank
 
