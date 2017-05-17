@@ -10,8 +10,11 @@ stats = pd.concat([per_game, per_100_poss, advanced], axis=1)
 
 # Droping empty columns
 stats = stats.drop(['Unnamed: 24', 'Unnamed: 29', 'Unnamed: 19'], axis=1)
-print(stats.columns)
 
 # Droping duplicated columns with same values
 stats = stats.T.drop_duplicates().T
-print(stats.columns)
+
+# Droping raws with stats of players which was traded this season (Dataframe had raws with stats in old team,
+# in new team and total. We keep only total stats of these players)
+stats = stats.drop_duplicates(['Rk']).reset_index()
+print(stats.dtypes)
