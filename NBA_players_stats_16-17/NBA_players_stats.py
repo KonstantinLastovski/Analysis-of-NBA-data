@@ -1,4 +1,5 @@
 import pandas as pd
+import matplotlib.pyplot as plt
 
 # Reading datasets
 per_game = pd.read_csv('NBA_players_stats_per_game.csv')
@@ -37,6 +38,13 @@ for i in stats.Player:
     list_player.append(i)
 stats.Player = list_player
 
-print(stats.dtypes)
+print(stats.columns)
 
-
+#Visualization of distribution NBA players of different ages
+plt.hist(stats.Age, color='green')
+plt.xlabel('Age of players')
+plt.ylabel('Number of players')
+plt.title('The number of NBA players of every age')
+plt.grid(True)
+plt.axis([18, 41, 0, 100])
+plt.show()
