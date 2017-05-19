@@ -1,3 +1,4 @@
+import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 
@@ -38,13 +39,23 @@ for i in stats.Player:
     list_player.append(i)
 stats.Player = list_player
 
-print(stats.columns)
+print(list(stats.Age.unique()))
 
 #Visualization of distribution NBA players of different ages
-plt.hist(stats.Age, color='green')
+fig = plt.figure()
+
+plt.rc('lines', lw=2, color='g')
+ax = fig.add_subplot(111)
+
+ax.set_xticks(np.arange(18,41,1))
+ax.set_yticks(np.arange(0,51,1))
+ax.set_xlim(18,41)
+ax.set_ylim(0,51)
+
+plt.hist(stats.Age, bins=22, range = (19, 41), align ='left', ec ='black', fc = 'g', alpha = 0.6, lw = 1.9)
+
 plt.xlabel('Age of players')
 plt.ylabel('Number of players')
 plt.title('The number of NBA players of every age')
 plt.grid(True)
-plt.axis([18, 41, 0, 100])
 plt.show()
