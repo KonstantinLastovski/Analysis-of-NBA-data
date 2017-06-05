@@ -44,7 +44,6 @@ print(list(stats.Age.unique()))
 #Visualization of distribution NBA players of different ages
 fig = plt.figure()
 
-plt.rc('lines', lw=2, color='g')
 ax = fig.add_subplot(111)
 
 ax.set_xticks(np.arange(18,41,1))
